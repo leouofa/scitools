@@ -37,6 +37,9 @@ To execute the code locally execute
 ./exe/scitools
 ```
 
+## Good to Know
+- On OSX you can type µ by hitting _option + m_
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/leouofa/scitools. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/scitools/blob/master/CODE_OF_CONDUCT.md).

@@ -17,5 +17,17 @@ module Scitools
       puts "v#{Scitools::VERSION}"
     end
     map %w(--version -v) => :version
+
+    desc 'convert_unit NUMBER FROM_UNIT TO_UNIT', 'converts a number from one SI unit to another'
+    method_option :help, aliases: '-h', type: :boolean,
+                         desc: 'Display usage information'
+    def convert_unit(number, from_unit, to_unit)
+      if options[:help]
+        invoke :help, ['convert_unit']
+      else
+        require_relative 'commands/convert_unit'
+        Scitools::Commands::ConvertUnit.new(number, from_unit, to_unit, options).execute
+      end
+    end
   end
 end
