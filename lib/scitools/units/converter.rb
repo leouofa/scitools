@@ -62,6 +62,9 @@ module Scitools
       end
 
       def find_base(unit)
+        puts "Unit length: #{unit.length}"
+
+
         @base_units.each_with_index do |base, index|
           if index >= 0 && index < 5
             if unit[0] == base.symbol
