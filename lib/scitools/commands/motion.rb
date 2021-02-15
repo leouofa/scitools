@@ -11,7 +11,8 @@ module Scitools
       end
 
       def execute(input: $stdin, output: $stdout)
-        formula = prompt.select('Which formula would you like to load?', ['Displacement']).downcase
+        formula = prompt.select('Which formula would you like to load?', ['Displacement'], ['Average Velocity'])
+                        .downcase.gsub(' ', '_')
 
         formula_bank = Scitools::Formulas::Motion.new
         formula_bank.send(formula)
