@@ -18,6 +18,18 @@ module Scitools
     end
     map %w(--version -v) => :version
 
+    desc 'motion', 'Command description...'
+    method_option :help, aliases: '-h', type: :boolean,
+                         desc: 'Display usage information'
+    def motion(*)
+      if options[:help]
+        invoke :help, ['motion']
+      else
+        require_relative 'commands/motion'
+        Scitools::Commands::Motion.new(options).execute
+      end
+    end
+
     desc 'convert_unit NUMBER FROM_UNIT TO_UNIT', 'converts a number from one SI unit to another'
     method_option :help, aliases: '-h', type: :boolean,
                          desc: 'Display usage information'
