@@ -34,6 +34,9 @@ module Scitools
                              '',
                              @notice.call('Atomic Mass Unit is abbreviated as (AMU) or just (u).'),
                              @regular.call('It is defined as 1.660540 x 10^-27 kg'),
+                             @regular.call("Proton's(p+) mass is about 1u, and neutron(n0) mass is a little bigger then 1u."),
+                             @regular.call('Both can be rounded off to 1u.'),
+                             @regular.call('Electrons(e-) are 1/2000th of a Proton(p+).'),
                              padding: 3, align: :left
         print box
       end
