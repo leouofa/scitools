@@ -18,6 +18,18 @@ module Scitools
     end
     map %w(--version -v) => :version
 
+    desc 'atoms', 'Command description...'
+    method_option :help, aliases: '-h', type: :boolean,
+                         desc: 'Display usage information'
+    def atoms(*)
+      if options[:help]
+        invoke :help, ['atoms']
+      else
+        require_relative 'commands/atoms'
+        Scitools::Commands::Atoms.new(options).execute
+      end
+    end
+
     desc 'motion', 'Command description...'
     method_option :help, aliases: '-h', type: :boolean,
                          desc: 'Display usage information'
