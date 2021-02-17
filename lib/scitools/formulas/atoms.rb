@@ -37,6 +37,12 @@ module Scitools
                              @regular.call("Proton's(p+) mass is about 1u, and neutron(n0) mass is a little bigger then 1u."),
                              @regular.call('Both can be rounded off to 1u.'),
                              @regular.call('Electrons(e-) are 1/2000th of a Proton(p+).'),
+                             '',
+                             @notice.call('*Isotopes* are different versions of an element.'),
+                             @regular.call('They have same number of protons, but different number of electrons'),
+                             '',
+                             @notice.call('Atomic Mass can be calculated bu adding a number of protons(p+) and neutrons(n0)'),
+                             @regular.call('Average Atomic Mass (as listed on the table) is a weighted average of the element *isotopes*'),
                              padding: 3, align: :left
         print box
       end
